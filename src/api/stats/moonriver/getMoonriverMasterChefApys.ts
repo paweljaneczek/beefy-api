@@ -85,7 +85,7 @@ const getFarmApys = async (params: MaticMasterChefApysParams): Promise<BigNumber
       .dividedBy(totalAllocPoint)
       .times(1 - (pool.depositFee ?? 0));
 
-    const secondsPerBlock = params.secondsPerBlock ?? 2;
+    const secondsPerBlock = params.secondsPerBlock ?? 12;
     const secondsPerYear = 31536000;
     const yearlyRewards = poolBlockRewards.dividedBy(secondsPerBlock).times(secondsPerYear);
     const yearlyRewardsInUsd = yearlyRewards.times(tokenPrice).dividedBy(params.decimals);

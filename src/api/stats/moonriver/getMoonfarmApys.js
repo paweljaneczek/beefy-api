@@ -14,6 +14,7 @@ const getMoonfarmApys = async () =>
     oracle: 'tokens',
     decimals: '1e18',
     liquidityProviderFee: MOON_LPF,
+    log: true,
   });
 
 module.exports = { getMoonfarmApys };

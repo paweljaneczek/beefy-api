@@ -2,6 +2,10 @@ import { ChainId } from '../packages/address-book/address-book';
 
 const API_BASE_URL = process.env.API_BASE_URL || 'http://localhost:3000';
 
+type Environment = 'development' | 'prodution';
+
+const ENV: Environment = process.env.NODE_ENV;
+
 const BASE_HPY = 2190;
 const MINUTELY_HPY = 525600;
 const HOURLY_HPY = 8760;
@@ -103,4 +107,5 @@ export {
   MOON_LPF,
   BEEFY_PERFORMANCE_FEE,
   SHARE_AFTER_PERFORMANCE_FEE,
+  ENV,
 };

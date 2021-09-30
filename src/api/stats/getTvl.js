@@ -1,8 +1,8 @@
 const getChainTvl = require('./getChainTvl.js');
 
-const { MOONRIVER_CHAIN_ID, MOONRIVER_VAULTS_ENDPOINT } = require('../../constants');
+const { MOONRIVER_CHAIN_ID, MOONRIVER_VAULTS_ENDPOINT, ENV } = require('../../constants');
 
-const INIT_DELAY = 40 * 1000;
+const INIT_DELAY = ENV === 'development' ? 0 : 40 * 1000;
 const REFRESH_INTERVAL = 15 * 60 * 1000;
 
 let tvl = {};
